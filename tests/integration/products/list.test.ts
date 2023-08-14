@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
 
-import createMock from '../../mocks/create.mock';
+import productMock from '../../mocks/product.mock';
 import ProductModel from '../../../src/database/models/product.model';
 import productService from '../../../src/services/products.service';
 
@@ -13,6 +13,6 @@ describe('GET /products', function () {
   describe('testar se é listado todos os produtos', async function () {
     const serviceResponse = await productService.findAll();
 
-    expect(serviceResponse).to.deep.eq(createMock.allProductsResponse);
+    expect(serviceResponse).to.deep.eq(productMock.allProductsResponse);
   });
 });
