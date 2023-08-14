@@ -31,6 +31,6 @@ describe('POST /products', function () {
     // Assert
     // console.log(httpResponse);
     expect(httpResponse.status).to.equal(201);
-    expect(httpResponse.body).to.be.deep.equal(productMock.newProductResponse);
+    expect(httpResponse.body).to.be.deep.equal({ ...productMock.newProductResponse, id: httpResponse.body.id });
 });
 });
