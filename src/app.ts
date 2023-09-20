@@ -7,7 +7,12 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/products', productsController.create);
+app.post(
+  '/products',
+  productsController.validateNameProduct,
+  productsController.validatePriceProduct,
+  productsController.create,
+);
 app.get('/products', productsController.findAll);
 app.get('/orders', ordersController.findAll);
 app.post(

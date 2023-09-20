@@ -32,9 +32,44 @@ const allProductsResponse = [
   }
 ];
 
+const noNameProductBody = {
+  price: 'price',
+};
+
+const noPriceProductBody = {
+  name: 'punhal de mithril',
+};
+
+const nameAsNumberType = {
+  name: 1,
+  price: 'price',
+};
+
+const priceAsNumberType = {
+  name: 'espada élfica',
+  price: 1,
+};
+
+const priceLengthTwoCharacters = {
+  name: 'espada élfica',
+  price: 'um',
+};
+
+const nameLengthTwoCharacters = {
+  name: 'ar',
+  price: '10 peças de prata',
+};
+
+
 export default {
   newProductRequest,
   newProductResponse,
   newProductBuild,
   allProductsResponse,
+  noNameProductBody,
+  noPriceProductBody,
+  nameAsNumberType,
+  priceAsNumberType,
+  nameLengthTwoCharacters,
+  priceLengthTwoCharacters,
 };
